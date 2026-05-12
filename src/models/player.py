@@ -18,6 +18,7 @@ class Player(Base):
     __tablename__ = 'players'
     id: Mapped[int] = mapped_column(primary_key=True, init=False)
     username: Mapped[str] = mapped_column(unique=True)
+    address: Mapped[str] = mapped_column()
     email: Mapped[str] = mapped_column(unique=True)
     birth_date: Mapped[date] = mapped_column()
     elo: Mapped[int] = mapped_column(default=1200)
